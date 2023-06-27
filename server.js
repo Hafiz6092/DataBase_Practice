@@ -24,6 +24,17 @@ app.get('/customers', async (req, res) => {
 
 app.get('/cars', async (req, res) => {
     const text = 'SELECT * from cars'
+    
+
+    /**
+     * we can also do
+     * const text = 'SELECT count(*) from customers 
+     * which will give us:
+     * {
+        "count": "4"
+        }
+     */
+    
     //res.send(text);
     console.log('Cars Table reached');
     //pool.query('SELECT * FROM cars', (error, result)=>{
